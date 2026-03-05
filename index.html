@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Melao de Elena y Marino</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+:root{--rosa:#E91E63;--rosa-claro:#FCE4EC;--blanco:#FFFFFF;--texto:#4A4A4A}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background-color:var(--rosa-claro);color:var(--texto);line-height:1.6}
+header{background:var(--blanco);padding:15px 5%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0;z-index:1000}
+.logo-img{width:70px;height:70px;border-radius:50%;object-fit:cover;border:3px solid var(--rosa)}
+.nav-links{display:flex;gap:25px;align-items:center}
+.nav-links a{text-decoration:none;color:var(--rosa);font-weight:600;font-size:1.1rem;padding:10px 20px;border-radius:25px;transition:all 0.3s ease;display:flex;align-items:center;gap:8px}
+.nav-links a:hover{background-color:var(--rosa);color:var(--blanco);transform:translateY(-2px);box-shadow:0 4px 10px rgba(233,30,99,0.3)}
+.nav-links a i{font-size:1.2rem}
+.hero{background:linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)),url('IMG-20260304-WA0076.jpg');background-size:cover;text-align:center;padding:80px 20px;display:flex;flex-direction:column;align-items:center}
+.main-title{font-family:'Dancing Script',cursive;font-size:4.5rem;color:var(--rosa);text-shadow:2px 2px 4px rgba(0,0,0,0.1);display:flex;align-items:center;justify-content:center;flex-wrap:wrap}
+.cake-in-title{width:120px;height:120px;border-radius:50%;object-fit:cover;border:4px solid var(--rosa);margin:0 15px;box-shadow:0 4px 15px rgba(233,30,99,0.2);animation:float 3s ease-in-out infinite}
+@keyframes float{0%{transform:translateY(0px)}50%{transform:translateY(-10px)}100%{transform:translateY(0px)}}
+.intro-text{max-width:700px;font-size:1.2rem;color:#555;margin-top:20px}
+.scroll-down{margin-top:40px;animation:bounce 2s infinite;color:var(--rosa);font-size:2rem;cursor:pointer;text-decoration:none}
+@keyframes bounce{0%,20%,50%,80%,100%{transform:translateY(0)}40%{transform:translateY(-10px)}60%{transform:translateY(-5px)}}
+.products-section{padding:60px 5%;text-align:center}
+.section-title{font-family:'Dancing Script',cursive;font-size:3rem;color:var(--rosa);margin-bottom:40px}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px}
+.product-card{background:var(--blanco);border-radius:15px;overflow:hidden;box-shadow:0 4px 15px rgba(233,30,99,0.2);transition:transform 0.3s}
+.product-card:hover{transform:translateY(-5px)}
+.product-img{width:100%;height:250px;object-fit:cover;border-bottom:4px solid var(--rosa)}
+.product-info{padding:15px}
+.product-info h3{color:var(--rosa);font-size:1.2rem}
+.info-section{background:var(--blanco);padding:60px 5%;display:flex;flex-wrap:wrap;justify-content:center;gap:40px;margin-top:40px}
+.info-box{flex:1;min-width:300px;text-align:center;padding:30px;border:1px solid var(--rosa-claro);border-radius:20px;background-color:#FFF9FC}
+.info-box i{font-size:2.5rem;color:var(--rosa);margin-bottom:15px}
+.info-box h3{color:#C2185B;margin-bottom:15px;font-size:1.5rem}
+.whatsapp-btn-container{text-align:center;margin-top:30px}
+.btn-whatsapp{background-color:#25D366;color:white;padding:15px 30px;border-radius:50px;text-decoration:none;font-weight:bold;font-size:1.1rem;display:inline-flex;align-items:center;gap:10px;box-shadow:0 4px 15px rgba(37,211,102,0.4);transition:all 0.3s}
+.btn-whatsapp:hover{background-color:#128C7E;transform:scale(1.05)}
+footer{background-color:var(--rosa);color:var(--blanco);text-align:center;padding:40px 20px;margin-top:50px}
+.social-icons{margin:20px 0}
+.social-icons a{color:var(--blanco);font-size:1.8rem;margin:0 15px;transition:color 0.3s}
+.social-icons a:hover{color:var(--rosa-claro)}
+.float-wa{position:fixed;width:60px;height:60px;bottom:30px;right:30px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow:2px 2px 3px #999;z-index:100;display:flex;align-items:center;justify-content:center;text-decoration:none}
+.float-wa:hover{background-color:#128C7E}
+@media(max-width:768px){.main-title{font-size:3rem}.cake-in-title{width:80px;height:80px}header{flex-direction:column;gap:10px}.nav-links{flex-direction:column;gap:15px}}
+</style>
+</head>
+<body>
+<header>
+<div class="logo-container"><img src="IMG-20260304-WA0085.jpg" alt="Logo El Melao" class="logo-img"></div>
+<nav class="nav-links">
+<a href="#productos"><i class="fas fa-utensils"></i> Menú</a>
+<a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1 class="main-title">
+El Melao de 
+<img src="IMG-20260304-WA0085.jpg" alt="Bizcocho" class="cake-in-title">
+Elena y Marino
+</h1>
+<p class="intro-text">Endulzamos tus momentos especiales y tu día a día con sabores únicos e irresistibles.</p>
+<a href="#productos" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
+</section>
+
+<section id="productos" class="products-section">
+<h2 class="section-title">🍰 Nuestros Productos</h2>
+<div class="products-grid">
+<div class="product-card"><img src="Collage_20260304_204712.jpg" alt="Bizcochos" class="product-img"><div class="product-info"><h3>Bizcochos nuestra especialidad</h3></div></div>
+<div class="product-card"><img src="Collage_20260304_203908.jpg" alt="Postres" class="product-img"><div class="product-info"><h3>Postres y Galletas personalizadas</h3></div></div>
+<div class="product-card"><img src="Collage_20260304_203838.jpg" alt="Postres" class="product-img"><div class="product-info"><h3>Postres y crema de fresa</h3></div></div>
+<div class="product-card"><img src="IMG-20260304-WA0069.jpg" alt="Jugo" class="product-img"><div class="product-info"><h3>Jugo de chinola de la casa</h3></div></div>
+<div class="product-card"><img src="IMG-20260304-WA0060.jpg" alt="Crema" class="product-img"><div class="product-info"><h3>Crema de fresa sabrosa</h3></div></div>
+<div class="product-card"><img src="file_00000000e984722fa649813ed09f0cf5.png" alt="Helados" class="product-img"><div class="product-info"><h3>Helados artesanales</h3></div></div>
+<div class="product-card"><img src="file_00000000f4d071f5810141297c827596.png" alt="Postres" class="product-img"><div class="product-info"><h3>Postres</h3></div></div>
+<div class="product-card"><img src="file_000000008d871f5ac5875cb1dd303f7.png" alt="Flan" class="product-img"><div class="product-info"><h3>Flan y tres leche</h3></div></div>
+<div class="product-card"><img src="Collage_20260304_174307.jpg" alt="Pedidos" class="product-img"><div class="product-info"><h3>Pedidos por mayoría</h3></div></div>
+<div class="product-card"><img src="Collage_20260304_174409.jpg" alt="Bandejas" class="product-img"><div class="product-info"><h3>Bandejas full de todo</h3></div></div>
+<div class="product-card"><img src="Collage_20260304_174808.jpg" alt="Bizcochos" class="product-img"><div class="product-info"><h3>Bizcochos</h3></div></div>
+<div class="product-card"><img src="Collage_20260304_175848.jpg" alt="Picaderas" class="product-img"><div class="product-info"><h3>Picaderas al por mayor</h3></div></div>
+<div class="product-card"><img src="IMG-20260304-WA0055.jpg" alt="Mini cakes" class="product-img"><div class="product-info"><h3>Míni cakes ricos</h3></div></div>
+<div class="product-card"><img src="IMG-20260304-WA0054.jpg" alt="Donas" class="product-img"><div class="product-info"><h3>Donas y Galletas personalizadas</h3></div></div>
+</div>
+</section>
+
+<section id="contacto" class="info-section">
+<div class="info-box">
+<i class="far fa-clock"></i>
+<h3>Horarios de Atención</h3>
+<p>Lunes a Domingo</p>
+<p><strong>8:00 a.m. – 8:00 p.m.</strong></p>
+</div>
+<div class="info-box">
+<i class="fas fa-map-marker-alt"></i>
+<h3>Ubicación</h3>
+<p>Calle Puente Blanco, No. 22A</p>
+<p>Los Libertadores, Los Alcarrizos</p>
+</div>
+<div class="info-box">
+<i class="fas fa-phone-alt"></i>
+<h3>Contáctanos</h3>
+<p>Teléfono / WhatsApp: 829-795-0756</p>
+<div class="whatsapp-btn-container">
+<a href="https://wa.me/18297950756" class="btn-whatsapp" target="_blank">
+<i class="fab fa-whatsapp"></i> Haz tu pedido ahora
+</a>
+</div>
+</div>
+</section>
+
+<footer>
+<h3>Síguenos en Redes Sociales</h3>
+<div class="social-icons">
+<a href="https://instagram.com/elmelaodeelena" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://facebook.com/BizcochoElena" target="_blank"><i class="fab fa-facebook"></i></a>
+</div>
+<p>&copy; 2024 El Melao de Elena y Marino. Todos los derechos reservados.</p>
+</footer>
+
+<a href="https://wa.me/18297950756" class="float-wa" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+</body>
+</html>
